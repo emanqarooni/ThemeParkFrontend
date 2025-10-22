@@ -35,8 +35,13 @@
 
 ![ERD](./public/images/erd1.png)
 
+![Hierarchy](./public/images/hierarchy.png)
 
+![Home](./public/images/home%20page.png)
 
+![Details](./public/images/details%20page.png)
+
+![Create](./public/images/create%20page.png)
 
 ### ***Future Updates***
  - Users can edit theme parks.
