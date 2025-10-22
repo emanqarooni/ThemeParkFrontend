@@ -1,42 +1,258 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* 🎡 GLOBAL STYLES */
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* 🎟️ NAVBAR */
+nav {
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid #fff6d6;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  color: #ffe082;
+}
+
+nav div {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* 🎡 HOME PAGE */
+h1 {
   text-align: center;
+  margin: 2rem 0;
+  font-family: "Luckiest Guy", cursive;
+  color: #ff3b3f;
+  text-shadow: 2px 2px #fff;
+  letter-spacing: 2px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-container > p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.home-container div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.card {
-  padding: 2em;
+.home-container a {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.read-the-docs {
-  color: #888;
+.home-container a:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.home-container img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home-container h2 {
+  font-family: "Luckiest Guy", cursive;
+  color: #ff5f6d;
+  margin: 0.5rem 1rem;
+}
+
+.home-container p {
+  margin: 0 1rem 1rem;
+  color: #666;
+}
+
+/* 🎢 CREATE PAGE */
+form {
+  background: #fff;
+  border-radius: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input,
+form textarea,
+form select {
+  border: 2px solid #ffd166;
+  border-radius: 8px;
+  padding: 0.7rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #ff5f6d;
+}
+
+form label {
+  font-weight: 600;
+  color: #444;
+}
+
+form button {
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  color: white;
+  font-family: "Luckiest Guy", cursive;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 95, 109, 0.4);
+}
+
+/* 🎠 SELECTED GAMES DISPLAY */
+form div strong {
+  color: #ff5f6d;
+}
+
+form div div {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 🎢 DETAILS PAGE */
+.details-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.details-container img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.details-container h1 {
+  color: #ff5f6d;
+  margin-top: 1rem;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.details-container p {
+  margin: 0.5rem 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+.details-container h3 {
+  margin-top: 2rem;
+  color: #ff3b3f;
+  font-family: "Luckiest Guy", cursive;
+}
+
+/* 🎡 GAME CARDS IN DETAILS */
+.details-container div > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.details-container div > div > div {
+  background: #fffaf2;
+  border: 2px solid #ffe082;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.details-container div > div > div:hover {
+  transform: translateY(-5px);
+}
+
+.details-container div img {
+  width: 100%;
+  border-radius: 0.5rem;
+  height: 150px;
+  object-fit: cover;
+}
+
+.details-container button {
+  margin-top: 2rem;
+  background: #ff3b3f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-family: "Luckiest Guy", cursive;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.details-container button:hover {
+  background: #ff1c26;
+}
+
+.createTitle {
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  color: #ff3b3f;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px #fff5cc;
+  letter-spacing: 2px;
 }
